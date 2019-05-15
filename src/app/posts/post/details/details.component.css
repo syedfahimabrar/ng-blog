@@ -1,0 +1,13 @@
+.whbg{
+  background-color: #dee2e6;
+  border-radius: 1rem;
+  display: block;
+  margin: 0 0 2rem 0;
+  min-width: 12rem;
+  height: 100%;
+  padding: 0 2rem;
+  width: 100%;
+}
+.cnt{
+  padding-top: 5%;
+}

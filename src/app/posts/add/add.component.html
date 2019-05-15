@@ -1,0 +1,15 @@
+<div class="wrap">
+  <div class="content">
+    <form (ngSubmit)="onSubmit()">
+      <label for="postTitle">Post Title Here</label>
+      <input type="text" [(ngModel)]="post.postTitle" name="postTitle">
+      <br>
+      <label for="postImage">Post Header Image</label>
+      <input type="text" [(ngModel)]="post.postImage" name="postTitle">
+      <img [src]="post.postImage">
+      <angular-editor  [(ngModel)]="post.postDesc" name="contents"></angular-editor>
+      <button class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+</div>

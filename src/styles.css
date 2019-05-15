@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "assets/clean-blog.min.css";
+@import "assets/fontawesome-free/css/all.min.css";
+@import '~open-iconic/font/css/open-iconic-bootstrap.css';
+@import '~ngx-toastr/toastr';
+body{
+  background-image: url("/assets/img/bg.jpg");
+}
