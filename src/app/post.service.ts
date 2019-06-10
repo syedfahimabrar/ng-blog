@@ -19,14 +19,14 @@ export class PostService {
   getPosts() {
     // @ts-ignore
     this.posts = this.fireStore.collection('posts',ref => ref.orderBy('postDate', 'desc')).snapshotChanges();
-    return this.posts;
+    return this.fireStore.collection('posts',ref => ref.orderBy('postDate', 'desc')).snapshotChanges();
   }
     getPost(id: string) {
       return this.fireStore.collection('posts').doc(id).get();
     }
   createPost(post: PostModel) {
     const param = JSON.parse(JSON.stringify(post));
-    return this.fireStore.collection('posts').add({...post, postDate:firebase.firestore.Timestamp.now()});
+    return this.fireStore.collection('posts').add({...post, postDate: firebase.firestore.Timestamp.now()});
   }
   delete(id:string){
     this.fireStore.collection('posts').doc(id).delete();
